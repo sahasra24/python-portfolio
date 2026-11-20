@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sahasra Reddy Portfolio</title>
+  <meta name="description" content="Sahasra Reddy — Python Software Engineer building backend services, REST APIs, data reconciliation pipelines and test automation with FastAPI, Django, Pandas and AWS." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐍</text></svg>" />
+</head>
+<body>
+  <!-- ============ EDITOR-STYLE NAV ============ -->
+  <header class="topbar">
+    <a href="#home" class="brand"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="brand-name">sahasra_reddy.py</span></a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="tabs" aria-label="Sections">
+      <a href="#home" class="tab active">__init__.py</a>
+      <a href="#about" class="tab">about.py</a>
+      <a href="#skills" class="tab">requirements.txt</a>
+      <a href="#experience" class="tab">career.log</a>
+      <a href="#projects" class="tab">test_projects.py</a>
+      <a href="#contact" class="tab">contact.py</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ HERO / LIVE REPL ============ -->
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <p class="eyebrow"><span class="pulse"></span> Open to Python / Backend roles</p>
+        <h1>Sahasra <span class="hl">Reddy</span></h1>
+        <p class="role">Python Software Engineer<span class="caret">_</span></p>
+        <p class="lede">I build <strong>backend services, REST APIs</strong> and <strong>test automation</strong> that hold up in production — from post-trade reconciliation in financial services to scheduling systems that save managers 12 hours a week.</p>
+        <div class="cta-row">
+          <a href="#projects" class="btn primary">run projects()</a>
+          <a href="resume.pdf" class="btn ghost" download>download resume.pdf</a>
+        </div>
+        <ul class="socials">
+          <li><a href="mailto:sahasrareddy024@gmail.com">email</a></li>
+          <li><a href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noopener">linkedin</a></li>
+          <li><a href="https://github.com/your-github" target="_blank" rel="noopener">github</a></li>
+        </ul>
+      </div>
+
+      <div class="repl" aria-label="Interactive Python console">
+        <div class="repl-bar">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <span class="repl-title">python3 — interactive</span>
+        </div>
+        <div class="repl-body" id="replBody" role="log" aria-live="polite"></div>
+        <form class="repl-input" id="replForm" autocomplete="off">
+          <span class="prompt">&gt;&gt;&gt;</span>
+          <input id="replInput" type="text" spellcheck="false" aria-label="Type a Python command" placeholder="try: help()" />
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="stats" aria-label="Highlights">
+      <div class="stat"><span class="num" data-count="4" data-suffix="+">0</span><span class="lbl">years shipping Python</span></div>
+      <div class="stat"><span class="num" data-count="65" data-suffix="%">0</span><span class="lbl">less manual scheduling</span></div>
+      <div class="stat"><span class="num" data-count="90" data-suffix="%">0</span><span class="lbl">test coverage, 40+ bugs caught</span></div>
+      <div class="stat"><span class="num" data-count="35" data-suffix="%">0</span><span class="lbl">faster API responses</span></div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section">
+      <div class="section-head">
+        <span class="file">about.py</span>
+        <h2>class <span class="hl">SahasraReddy</span>(Engineer)</h2>
+      </div>
+      <div class="about-grid">
+        <pre class="code reveal"><code><span class="dec">@dataclass</span>
+<span class="kw">class</span> <span class="cls">SahasraReddy</span>(<span class="cls">Engineer</span>):
+    <span class="str">"""Python engineer who likes clean APIs,
+    honest tests and data that reconciles."""</span>
+
+    role: <span class="cls">str</span>      = <span class="str">"Python Software Engineer"</span>
+    based_in: <span class="cls">str</span>  = <span class="str">"United States · Remote"</span>
+    education: <span class="cls">str</span> = <span class="str">"M.S. Computer Science, UNC Charlotte (4.0 GPA)"</span>
+    domains: <span class="cls">list</span>  = field(default_factory=<span class="kw">lambda</span>: [
+        <span class="str">"Financial Services · post-trade"</span>,
+        <span class="str">"Restaurant Operations"</span>,
+        <span class="str">"Product Engineering"</span>,
+    ])
+
+    <span class="kw">def</span> <span class="fn">daily_driver</span>(self):
+        <span class="kw">return</span> [<span class="str">"FastAPI"</span>, <span class="str">"Django"</span>, <span class="str">"PyTest"</span>, <span class="str">"Pandas"</span>, <span class="str">"Claude Code"</span>]</code></pre>
+        <div class="about-copy reveal">
+          <p>I've spent 4+ years writing Python that other people depend on: <strong>secure APIs</strong> with JWT &amp; RBAC, <strong>idempotent processing</strong> that survives duplicate messages and late-arriving trades, and <strong>background jobs</strong> with Celery &amp; Redis that keep apps fast at peak.</p>
+          <p>I care a lot about testing — PyTest, Playwright, Karate and HyperExecute are my safety net — and I own features end to end, from requirements through CI/CD and release.</p>
+          <p>Lately I'm building <strong>LLM / RAG</strong> applications and using Claude Code daily to get up to speed on unfamiliar codebases.</p>
+          <div class="tags">
+            <span>FastAPI</span><span>Django REST</span><span>PostgreSQL</span><span>AWS</span><span>Kubernetes</span><span>RAG</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="section">
+      <div class="section-head">
+        <span class="file">requirements.txt</span>
+        <h2>$ pip install <span class="hl">-r sahasra.txt</span></h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal"><h3># core</h3><ul><li>python<b>==expert</b></li><li>sql</li><li>typescript</li><li>javascript</li><li>java</li><li>go</li></ul></div>
+        <div class="skill-card reveal"><h3># frameworks &amp; apis</h3><ul><li>fastapi</li><li>django</li><li>djangorestframework</li><li>jwt-auth + rbac</li><li>openapi / swagger</li><li>microservices</li></ul></div>
+        <div class="skill-card reveal"><h3># data</h3><ul><li>pandas</li><li>data-validation</li><li>reconciliation</li><li>etl</li><li>postgresql</li><li>mongodb</li></ul></div>
+        <div class="skill-card reveal"><h3># async &amp; messaging</h3><ul><li>celery</li><li>redis</li><li>amazon-sqs</li><li>amazon-sns</li><li>dead-letter queues</li></ul></div>
+        <div class="skill-card reveal"><h3># testing</h3><ul><li>pytest</li><li>playwright</li><li>karate (bdd)</li><li>hyperexecute</li><li>unit / integration / e2e</li></ul></div>
+        <div class="skill-card reveal"><h3># cloud &amp; devops</h3><ul><li>aws (ec2, eks, s3, iam, rds)</li><li>docker</li><li>kubernetes</li><li>jenkins</li><li>harness</li><li>github / gitlab</li></ul></div>
+        <div class="skill-card reveal"><h3># frontend</h3><ul><li>react</li><li>angular</li><li>typescript</li></ul></div>
+        <div class="skill-card reveal"><h3># ai &amp; tools</h3><ul><li>llm / rag</li><li>pgvector</li><li>claude-code</li><li>vs-code · pycharm</li><li>agile / scrum</li></ul></div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE AS TRACEBACK ============ -->
+    <section id="experience" class="section">
+      <div class="section-head">
+        <span class="file">career.log</span>
+        <h2>Career <span class="hl">(most recent call first)</span>:</h2>
+      </div>
+
+      <ol class="trace">
+        <li class="frame reveal">
+          <div class="frame-head">
+            <code>File <span class="str">"vision_square_it.py"</span>, line <span class="num-c">2026</span>, in <span class="fn">software_engineer</span></code>
+            <span class="when">Sep 2026 – Present · Remote</span>
+          </div>
+          <h3>Vision Square IT Solutions — Software Engineer</h3>
+          <ul>
+            <li>Build backend services and REST APIs in <b>FastAPI</b> and <b>Django</b>, focused on clean, testable, documented code.</li>
+            <li>Own test automation: <b>PyTest</b> unit/integration, <b>Karate</b> API tests and <b>Playwright</b> UI tests running in parallel on <b>HyperExecute</b>.</li>
+            <li>Build CI/CD pipelines in <b>Jenkins</b> and <b>Harness</b>; own release planning, versioning and rollback.</li>
+            <li>Containerized services with <b>Docker</b> and migrated them to clustered <b>Kubernetes</b> with health checks and resource limits.</li>
+            <li>Decoupled services with <b>SQS</b> + <b>SNS</b>, including retry and dead-letter handling.</li>
+            <li>Validate datasets with <b>Pandas</b> and SQL on PostgreSQL; support Spring Boot → Java 17 modernization.</li>
+          </ul>
+        </li>
+
+        <li class="frame reveal">
+          <div class="frame-head">
+            <code>File <span class="str">"charles_river.py"</span>, line <span class="num-c">2026</span>, in <span class="fn">post_trade_reconcile</span></code>
+            <span class="when">Jan 2026 – Jun 2026</span>
+          </div>
+          <h3>Charles River — Software Development Engineer Intern</h3>
+          <ul>
+            <li>Built Python services that ingest, transform and <b>reconcile trade records</b> between internal and external sources.</li>
+            <li>Matched records on trade attributes with <b>Pandas</b> and flagged breaks for operations teams.</li>
+            <li>Handled partial fills, duplicate messages and late-arriving trades with <b>idempotent</b>, defensive logic.</li>
+            <li>Exposed reconciliation status and exception reports through REST endpoints; protected matching rules with PyTest.</li>
+          </ul>
+        </li>
+
+        <li class="frame reveal">
+          <div class="frame-head">
+            <code>File <span class="str">"panda_restaurant_group.py"</span>, line <span class="num-c">2025</span>, in <span class="fn">auto_schedule_shifts</span></code>
+            <span class="when">Oct 2024 – Nov 2025 · Charlotte, NC</span>
+          </div>
+          <h3>Panda Restaurant Group — Software Engineer</h3>
+          <ul>
+            <li>Built a <b>Django</b> staff-scheduling app that auto-assigns shifts — <b>65% less manual effort</b>, ~12 hours/week saved per manager.</li>
+            <li>Designed <b>DRF</b> endpoints for shifts, availability and time-off with <b>JWT + RBAC</b>.</li>
+            <li>Prevented double-booking with PostgreSQL transactions and <b>idempotency keys</b>; tuned queries for <b>35% faster</b> responses.</li>
+            <li>Moved notifications and schedule generation to <b>Celery + Redis</b>; PyTest suites hit <b>90% coverage</b> and caught 40+ defects.</li>
+            <li>Cut deployment time by <b>40%</b>; wrote a kiosk/KDS troubleshooting guide that reduced repeat tickets.</li>
+          </ul>
+        </li>
+
+        <li class="frame reveal">
+          <div class="frame-head">
+            <code>File <span class="str">"alcovex_product_studio.py"</span>, line <span class="num-c">2024</span>, in <span class="fn">full_stack_features</span></code>
+            <span class="when">Oct 2022 – Jun 2024 · India</span>
+          </div>
+          <h3>Alcovex Product Studio — Software Developer</h3>
+          <ul>
+            <li>Shipped full-stack features with a <b>Django</b> backend and <b>React + TypeScript</b> front end.</li>
+            <li>Implemented JWT + RBAC across DRF APIs; designed APIs with validation, pagination, filtering and consistent errors.</li>
+            <li>Built a secure file-upload service on <b>S3</b> with least-privilege <b>IAM</b>; supported releases on <b>EC2 / EKS / RDS</b>.</li>
+            <li>Improved response times via caching and SQL/index tuning; documented APIs with OpenAPI; mentored new interns.</li>
+          </ul>
+        </li>
+
+        <li class="frame reveal">
+          <div class="frame-head">
+            <code>File <span class="str">"alcovex_product_studio.py"</span>, line <span class="num-c">2022</span>, in <span class="fn">&lt;module&gt;</span></code>
+            <span class="when">Jun 2022 – Oct 2022 · India</span>
+          </div>
+          <h3>Alcovex Product Studio — Software Developer Intern</h3>
+          <ul>
+            <li>Built and tested Django REST endpoints, CRUD views and serializers with validation and error handling.</li>
+            <li>Wrote SQL and PyTest for release readiness; built reusable React components.</li>
+          </ul>
+        </li>
+      </ol>
+      <p class="trace-end"><span class="kw">CareerError</span>: <span class="str">still compiling — next frame could be your team.</span></p>
+    </section>
+
+    <!-- ============ PROJECTS AS PYTEST ============ -->
+    <section id="projects" class="section">
+      <div class="section-head">
+        <span class="file">test_projects.py</span>
+        <h2>$ pytest <span class="hl">projects/ -v</span></h2>
+      </div>
+      <p class="pytest-meta">============ test session starts ============<br />collected 4 items</p>
+
+      <div class="projects">
+        <article class="project reveal">
+          <div class="p-head"><code>test_ai_contract_analyzer</code><span class="pass">PASSED</span></div>
+          <h3>AI Document / Contract Analyzer</h3>
+          <p>A RAG service in FastAPI that answers questions over uploaded contracts with source-grounded answers and citations to the matching clauses. Extracts parties, dates, payment terms and renewals into structured JSON.</p>
+          <div class="stack"><span>Python</span><span>FastAPI</span><span>LLM</span><span>RAG</span><span>pgvector</span><span>Docker</span></div>
+          <a href="https://github.com/your-github" target="_blank" rel="noopener" class="p-link">view source →</a>
+        </article>
+
+        <article class="project reveal">
+          <div class="p-head"><code>test_playwright_framework</code><span class="pass">PASSED</span></div>
+          <h3>Playwright Test Automation Framework</h3>
+          <p>A reusable end-to-end framework built on the Page Object Model, with parallel runs, auto-retries for flaky steps, screenshots and traces on failure, and multi-browser / multi-env config.</p>
+          <div class="stack"><span>Python</span><span>Playwright</span><span>PyTest</span><span>Jenkins</span></div>
+          <a href="https://github.com/your-github" target="_blank" rel="noopener" class="p-link">view source →</a>
+        </article>
+
+        <article class="project reveal">
+          <div class="p-head"><code>test_fake_delivery_detection</code><span class="pass">PASSED</span></div>
+          <h3>Fake Product Delivery Detection</h3>
+          <p>Issues a hash-based signature per package and verifies it at delivery via QR scan to catch tampering or counterfeits. Every scan is an audit event, so mismatches trace back to the exact handoff.</p>
+          <div class="stack"><span>React</span><span>Node.js</span><span>MongoDB</span><span>QR</span></div>
+          <a href="https://github.com/your-github" target="_blank" rel="noopener" class="p-link">view source →</a>
+        </article>
+
+        <article class="project reveal">
+          <div class="p-head"><code>test_website_monitor</code><span class="pass">PASSED</span></div>
+          <h3>Website Monitor</h3>
+          <p>A lightweight Go service that checks site availability and response times on a schedule and reports outages.</p>
+          <div class="stack"><span>Go</span><span>Scheduling</span><span>Monitoring</span></div>
+          <a href="https://github.com/your-github" target="_blank" rel="noopener" class="p-link">view source →</a>
+        </article>
+      </div>
+      <p class="pytest-meta ok">============ 4 passed in 0.42s ============</p>
+    </section>
+
+    <!-- ============ EDUCATION + CERTS ============ -->
+    <section id="credentials" class="section">
+      <div class="section-head">
+        <span class="file">credentials.json</span>
+        <h2>import <span class="hl">credentials</span></h2>
+      </div>
+      <div class="cred-grid">
+        <div class="edu reveal">
+          <span class="badge">🎓 education</span>
+          <h3>M.S. in Computer Science</h3>
+          <p>University of North Carolina at Charlotte · May 2026</p>
+          <p class="gpa">GPA <b>4.0</b> / 4.0</p>
+          <p class="muted">Algorithms &amp; Data Structures · Database Systems · Software System Design</p>
+        </div>
+        <ul class="certs">
+          <li class="reveal"><span class="ck">✓</span><div><b>Generative AI</b><small>Google</small></div></li>
+          <li class="reveal"><span class="ck">✓</span><div><b>Cloud Digital Leader</b><small>Google Cloud</small></div></li>
+          <li class="reveal"><span class="ck">✓</span><div><b>MongoDB for SQL Professionals</b><small>MongoDB</small></div></li>
+          <li class="reveal"><span class="ck">✓</span><div><b>Oracle Certified Professional, Java SE Developer</b><small>Oracle</small></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section contact">
+      <div class="section-head">
+        <span class="file">contact.py</span>
+        <h2>def <span class="hl">say_hello</span>(you):</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-copy reveal">
+          <p>Hiring for a Python, backend or test-automation role? Have a gnarly data problem? I'd love to hear about it.</p>
+          <a class="big-mail" href="mailto:sahasrareddy024@gmail.com">sahasrareddy024@gmail.com</a>
+          <p class="muted">Or ask <b>PyBot</b> (bottom-right) anything about my work.</p>
+        </div>
+        <form class="contact-form reveal" id="contactForm">
+          <label>name <input name="name" required placeholder='"Ada Lovelace"' /></label>
+          <label>email <input name="email" type="email" required placeholder='"ada@company.com"' /></label>
+          <label>message <textarea name="message" rows="4" required placeholder='"""Let&apos;s talk about..."""'></textarea></label>
+          <button class="btn primary" type="submit">send_message()</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <code><span class="kw">if</span> __name__ == <span class="str">"__main__"</span>: build(<span class="str">"something great"</span>)</code>
+    <p>© <span id="year"></span> Sahasra Reddy · Built with HTML, CSS &amp; a little 🐍</p>
+  </footer>
+
+  <!-- ============ PYBOT ============ -->
+  <button class="bot-fab" id="botFab" aria-label="Chat with PyBot">
+    <svg viewBox="0 0 64 64" width="30" height="30" aria-hidden="true">
+      <path d="M31.6 4c-14 0-13.1 6-13.1 6v6.3h13.4v1.9H13.2S4 17.1 4 31.6s8 14 8 14h4.8v-6.7s-.3-8 7.9-8h13.3s7.7.1 7.7-7.4V11.2S46.9 4 31.6 4zm-7.4 4.3a2.4 2.4 0 1 1 0 4.8 2.4 2.4 0 0 1 0-4.8z" fill="#3776AB"/>
+      <path d="M32.4 60c14 0 13.1-6 13.1-6v-6.3H32.1v-1.9h18.7S60 46.9 60 32.4s-8-14-8-14h-4.8v6.7s.3 8-7.9 8H26s-7.7-.1-7.7 7.4v12.3S17.1 60 32.4 60zm7.4-4.3a2.4 2.4 0 1 1 0-4.8 2.4 2.4 0 0 1 0 4.8z" fill="#FFD43B"/>
+    </svg>
+    <span class="fab-ping"></span>
+  </button>
+
+  <div class="bot" id="bot" role="dialog" aria-label="PyBot chat" hidden>
+    <div class="bot-head">
+      <div class="bot-id"><span class="bot-avatar">🐍</span><div><b>PyBot</b><small><span class="online"></span> knows everything on Sahasra's resume</small></div></div>
+      <button class="bot-close" id="botClose" aria-label="Close chat">×</button>
+    </div>
+    <div class="bot-msgs" id="botMsgs" aria-live="polite"></div>
+    <div class="bot-chips" id="botChips"></div>
+    <form class="bot-form" id="botForm" autocomplete="off">
+      <input id="botInput" type="text" placeholder="Ask about skills, projects, experience…" aria-label="Message PyBot" />
+      <button type="submit" aria-label="Send">➤</button>
+    </form>
+  </div>
+
+  <script src="bot.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
